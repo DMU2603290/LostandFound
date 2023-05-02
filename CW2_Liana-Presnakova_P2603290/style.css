@@ -1,0 +1,134 @@
+@import url("//db.onlinewebfonts.com/c/19007e0c85468fd509414342e0ca9c68?family=Broadway");
+@font-face {
+  font-family: "Broadway";
+  src: url("Broadway.ttf") format("ttf");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  max-width: 1000px;
+  height: 700px;
+}
+.sad-peng {
+  width: 50%;
+  height: 500px;
+}
+#first-img {
+  position: relative;
+}
+h1,
+h2 {
+  color: #86bdd6;
+  font-family: "Broadway", sans-serif;
+  z-index: 1;
+}
+h2 {
+  padding: 0.5rem;
+  text-align: center;
+}
+.img {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.title {
+  position: absolute;
+  font-size: 5rem;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  top: 110px;
+  left: 20px;
+  color: #194a6a;
+}
+.title span {
+  color: #fb9525;
+}
+.story-lines {
+  color: #b9dae9;
+  padding: 0.5rem;
+  visibility: hidden;
+  margin-left: -1000px;
+  z-index: 1;
+  margin-top: 30px;
+}
+.scroll-manager-outer {
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.content,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.content:first-child {
+  height: 2000px;
+}
+.content {
+  align-items: flex-start;
+  height: 1400px;
+  background-color: #265471;
+}
+.first-line {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  visibility: hidden;
+}
+@media screen and (max-width: 900px) {
+  img {
+    width: 100%;
+    height: 600px;
+  }
+  .sad-peng {
+    height: 400px;
+  }
+  .title {
+    font-size: 4.3rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    margin-left: -1000px;
+  }
+  25% {
+    visibility: visible;
+    opacity: 0.25;
+  }
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  75% {
+    visibility: visible;
+    opacity: 0.75;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+.fadeInOut {
+  animation: fadeInOut 1.3s ease-in-out;
+  visibility: visible;
+  margin-left: 0;
+}
+.fadeOutIn {
+  animation: fadeInOut 500ms reverse;
+}
